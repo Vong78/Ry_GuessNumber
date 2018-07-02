@@ -58,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
     // 初始化一局遊戲
     private void initGame(){
         answer = createAnswer();
-        Log.d("brad", "answer => " + answer.toString());
         clear(null);
     }
 
@@ -145,6 +144,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // 顯示輸贏結果
     private void displayResult(boolean isWinner){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("遊戲結果");
@@ -176,6 +176,7 @@ public class MainActivity extends AppCompatActivity {
         return ret;
     }
 
+    // 重玩
     public void replay(View view) {
         initGame();
         hist.clear();
